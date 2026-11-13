@@ -1,0 +1,23 @@
+# WisperWin dependencies
+# Install with: pip install -r requirements.txt
+#
+# CUDA note: faster-whisper needs CuDNN 8.x DLLs on PATH for GPU acceleration.
+# See setup.md for details.
+
+faster-whisper>=1.0.0
+nvidia-cuda-runtime-cu12
+nvidia-cublas-cu12
+nvidia-cudnn-cu12
+sounddevice>=0.4.6
+numpy>=1.24.0
+PyQt5>=5.15.0
+anthropic>=0.25.0
+pyperclip>=1.8.2
+pywin32>=306
+keyring>=24.0          # API key storage in Windows Credential Manager
+pynput>=1.7.6
+psutil>=5.9.0
+pyyaml>=6.0
+noisereduce>=3.0.0     # noise cancellation (background music/crowd in cafeteria)
+scipy>=1.10.0          # high-pass filter used in noise pipeline
+pycaw>=20181226        # Windows audio API — mutes output while recording

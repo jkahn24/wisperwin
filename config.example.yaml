@@ -1,0 +1,36 @@
+# WisperWin settings. Copy to config.yaml and edit; config.yaml is git-ignored.
+# Every key is optional: anything missing falls back to the built-in default.
+# Most of these can also be changed from the tray icon's Settings window.
+
+# Never put your Anthropic API key here. Set it from Settings (stored in
+# Windows Credential Manager) or via the ANTHROPIC_API_KEY environment variable.
+api_key: ''
+
+hotkey: ctrl+space          # e.g. ctrl+alt+d
+model: large-v3             # faster-whisper model: large-v3 (GPU), distil-large-v3, small, ...
+language: en
+input_device: null          # null = system default microphone, else the device name
+mute_while_recording: true  # mute speakers while you dictate
+clipboard_ttl: 30           # seconds before the pasted text is cleared from the clipboard; 0 = never
+idle_unload_min: 10         # free the Whisper model after N idle minutes; 0 = keep loaded
+startup_on_login: false
+
+# Words and names Whisper tends to mishear. Used for local spelling fixes and
+# passed to the optional AI clean-up step. Replace with your own.
+vocabulary:
+- GitHub
+- Kubernetes
+- PostgreSQL
+- Claude Code
+- Figma
+- OKR
+
+# Extra clean-up modes, selectable in the overlay. Each sends the transcript
+# with this prompt to the optional AI clean-up step.
+custom_modes:
+- name: Stand-up
+  prompt: 'Convert this voice note into a concise stand-up update with three sections:
+    Yesterday, Today, Blockers. Use bullet points. Fix filler words.'
+- name: Action Items
+  prompt: 'Extract all action items from this voice note as a numbered list. Each
+    item should start with a verb. Be concise.'

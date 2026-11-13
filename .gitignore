@@ -1,0 +1,29 @@
+# Python
+__pycache__/
+*.py[cod]
+venv/
+.venv/
+.pytest_cache/
+
+# Logs and local state
+*.log
+*.tmp
+.env
+.env.*
+
+# Captures (never commit real screenshots or recordings)
+*.png
+*.jpg
+*.mp4
+*.gif
+!docs/*.gif
+!docs/*.png
+
+# Optional sound files (supply your own)
+sounds/*.wav
+
+# WisperWin personal data and settings
+config.yaml
+history.json
+usage.json
+unsent-audio/
